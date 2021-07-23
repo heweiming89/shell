@@ -41,7 +41,7 @@ sh ./maven.sh
 
 sh ./mysql.sh
 
-sh ./reids.sh
+sh ./redis.sh
 
 sh ./nginx.sh
 
