@@ -18,10 +18,10 @@ docker run -d --name gitlab-ce \
   gitlab/gitlab-ce
 
 echo "修改 gitlab root 密码"
-docker exec -it gitlab-ce bash -c "
-  gitlab-rails console -e production \
-  user = User.where(id: 1).first \
-  user.password = 'admin@123' \
-  user.password_confirmation = 'admin@123' \
-  user.save!
-"
+docker exec -it gitlab-ce bash -c "gitlab-rails console -e production"
+# shellcheck disable=SC1068
+user = User.where(id: 1).first;
+user.password = 'admin@123';
+user.password_confirmation = 'admin@123';
+user.save!;
+exit;
