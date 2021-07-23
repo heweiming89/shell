@@ -1,7 +1,13 @@
 #!/bin/bash
 
+cd /usr/local/src
+
+git clone git@github.com:heweiming89/shell.git
+
+cd shell/centos7
+
 # docker
-chmod +x ./docker.sh
+chmod +x ./*.sh
 # jdk
 chmod +x ./jdk.sh
 # maven
@@ -27,26 +33,21 @@ sh ./docker.sh
 
 sh ./jdk.sh
 
-sh ./docker.sh
+sh ./maven.sh
 
-sh ./jdk.sh
+sh ./mysql.sh
 
-sh ./jdk.sh
+sh ./reids.sh
 
-sh ./docker.sh
+sh ./nginx.sh
 
-sh ./jdk.sh
+sh ./minio.sh
 
-sh ./docker.sh
+sh ./nexus3.sh
 
-sh ./jdk.sh
+sh ./jenkins.sh
 
-sh ./docker.sh
+sh ./mssql.sh
 
-sh ./jdk.sh
+sh ./gitlab-ce.sh
 
-sh ./docker.sh
-
-sh ./jdk.sh
-
-sh ./docker.sh
