@@ -9,6 +9,8 @@
 # oracle jdk 11 下载地址（注意要用浏览器下载）
 # https://download.oracle.com/otn-pub/java/jdk/11.0.12%2B8/f411702ca7704a54a79ead0c2e0942a3/jdk-11.0.12_linux-x64_bin.rpm
 
+yum install -y wget
+
 echo "切换到 /usr/local/src"
 cd /usr/local/src
 
