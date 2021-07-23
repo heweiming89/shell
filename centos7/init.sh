@@ -1,10 +1,12 @@
 #!/bin/bash
 
-cd /usr/local/src
+# ssh-keygen -t rsa -C "heweiming89@163.com"
+# cat ~/.ssh/id_rsa.pub
+#cd /usr/local/src
 
-git clone git@github.com:heweiming89/shell.git
+#git clone git@github.com:heweiming89/shell.git
 
-cd shell/centos7
+#cd shell/centos7
 
 # docker
 chmod +x ./*.sh
