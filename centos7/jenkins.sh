@@ -24,7 +24,7 @@ docker run -d --name jenkins -u root \
   jenkins/jenkins:lts-jdk11
 
 # 查看密码
-# docker exec jenkins /var/jenkins_home/secrets/initialAdminPassword
+# docker exec -it jenkins /bin/bash -c "cat /var/jenkins_home/secrets/initialAdminPassword"
 
 # jenkins 镜像中已经包含了jdk，我们只不过把容器中这些工具的路径找出来，配置下路径即可
 # 先进入 jenkins 的容器中
