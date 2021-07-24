@@ -25,6 +25,9 @@ docker run -d --name jenkins -u root \
 
 # 查看密码
 # docker exec -it jenkins /bin/bash -c "cat /var/jenkins_home/secrets/initialAdminPassword"
+# 生成ssh key (已生成就不要执行了）
+# docker exec -it jenkins /bin/bash -c 'ssh-keygen -t rsa -C "heweiming89@163.com"'
+# docker exec -it jenkins /bin/bash -c 'cat /root/.ssh/id_rsa.pub'
 
 # jenkins 镜像中已经包含了jdk，我们只不过把容器中这些工具的路径找出来，配置下路径即可
 # 先进入 jenkins 的容器中
