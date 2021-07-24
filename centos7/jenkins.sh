@@ -31,6 +31,10 @@ docker run -d --name jenkins -u root \
 
 # jenkins 镜像中已经包含了jdk，我们只不过把容器中这些工具的路径找出来，配置下路径即可
 # 先进入 jenkins 的容器中
-# docker exec -it jenkins容器id /bin/bash
+# docker exec -it jenkins /bin/bash
 # jdk
 # 然后通过echo $JAVA_HOME来查看 java 路径在/usr/local中，然后配置进 jenkins 的 JAVA_HOME 中即可
+# /opt/java/openjdk
+
+# 软连接
+# ln -s /usr/local/maven/conf/settings.xml /root/.m2/settings.xml
