@@ -2,25 +2,23 @@
 
 : <<!
 
-  <server>
-    <id>poweritech-releases</id>
-    <username>admin</username>
-    <password>admin@123</password>
+    <server>
+      <id>poweritech-releases</id>
+      <username>admin</username>
+      <password>admin@123</password>
     </server>
-  <server>
 
-  <server>
-    <id>poweritech-snapshots</id>
-    <username>admin</username>
-    <password>admin@123</password>
+    <server>
+      <id>poweritech-snapshots</id>
+      <username>admin</username>
+      <password>admin@123</password>
     </server>
-  <server>
 
-  <server>
-    <id>poweritech-3rd</id>
-    <username>admin</username>
-    <password>admin@123</password>
-  </server>
+    <server>
+      <id>poweritech-3rd</id>
+      <username>admin</username>
+      <password>admin@123</password>
+    </server>
 
 !
 
