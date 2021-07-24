@@ -25,3 +25,6 @@ user.password = 'admin@123';
 user.password_confirmation = 'admin@123';
 user.save!;
 exit;
+
+# 设置中文
+# 用户头像 / Edit profile / Preferences / Localization / Language 选择 Chinese, Simplified - 简体中文 即可
