@@ -12,3 +12,6 @@ docker run -d --name nexus3 \
 echo "开放端口"
 firewall-cmd --zone=public --add-port=8081/tcp --permanent
 firewall-cmd --reload
+
+# 查看密码
+# docker exec -it nexus3 /bin/bash -c "cat /nexus-data/admin.password"
