@@ -26,3 +26,21 @@ echo "/usr/local/openssl/lib" >> openssl version
 ldconfig -v
 
 openssl version
+
+: << !
+
+1.使用openssl生成私钥和公钥
+
+openssl下载地址：http://www.openssl.org/source
+
+openssl生成私钥命令：openssl genrsa -out rsa_private_key.pem 1024
+
+openssl生成公钥命令：openssl rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
+
+2.此时在文件夹可以看到 rsa_private_key.pem 和 rsa_public_key.pem 两个文件。这时候的私钥是不能直接使用的，需要进行 pkcs8 编码
+
+openssl的pkcs8编码命令：openssl pkcs8 -topk8 -in rsa_private_key.pem -out pkcs8_rsa_private_key.pem -nocrypt
+
+那么在bin文件夹可以看到 pkcs8_rsa_private_key.pem 文件。至此，可用的密钥对已经生成好了，私钥使用pkcs8_rsa_private_key.pem，公钥采用rsa_public_key.pem。
+
+!
