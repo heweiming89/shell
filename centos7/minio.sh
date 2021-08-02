@@ -13,7 +13,7 @@ docker run -d --name minio \
   -p 9001:9001 \
   --restart=always \
   -e "MINIO_ROOT_USER=minio" \
-  -e "MINIO_ROOT_PASSWORD=admin@123" \
+  -e "MINIO_ROOT_PASSWORD=Admin@123" \
   -v /home/docker/minio/data:/data \
   -v /home/docker/minio/config:/root/.minio \
   minio/minio server /data --console-address ":9001"
