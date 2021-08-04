@@ -16,12 +16,17 @@ docker run -d --name jenkins -u root \
   --privileged=true --restart=always \
   -p 8080:8080 -p 50000:50000 \
   -e JAVA_OPTS="-Duser.timezone=GMT+08" \
-  -v /etc/localtime:/etc/localtime \
+  -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
   -v /usr/bin/docker:/usr/bin/docker \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v /usr/local/maven/apache-maven-3.8.1:/usr/local/maven \
   -v /home/docker/jenkins:/var/jenkins_home \
   jenkins/jenkins:lts-jdk11
+
+# 时间
+# cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# echo Asia/Shanghai > /etc/timezone
+# docker restart jenkins
 
 # 查看密码
 # docker exec -it jenkins /bin/bash -c "cat /var/jenkins_home/secrets/initialAdminPassword"
