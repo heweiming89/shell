@@ -24,6 +24,7 @@ docker run -d --name jenkins -u root \
   jenkins/jenkins:lts-jdk11
 
 # 时间
+# tzselect
 # cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # echo Asia/Shanghai > /etc/timezone
 # docker restart jenkins
