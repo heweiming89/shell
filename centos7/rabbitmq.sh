@@ -26,6 +26,8 @@ docker cp rabbitmq_delayed_message_exchange-3.8.17.8f537ac.ez rabbitmq:/plugins
 docker exec -it rabbitmq mkdir -p /usr/share/zoneinfo/Asia
 docker cp /usr/share/zoneinfo/Asia/Shanghai rabbitmq:/usr/share/zoneinfo/Asia/Shanghai
 docker exec -it rabbitmq ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+docker exec -it rabbitmq touch /etc/timezone
+#docker exec -it rabbitmq "echo Asia/Shanghai > /etc/timezone"
 
 docker exec -it rabbitmq rabbitmq-plugins enable rabbitmq_management
 docker exec -it rabbitmq rabbitmq-plugins enable rabbitmq_delayed_message_exchange
