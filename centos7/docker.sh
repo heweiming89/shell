@@ -23,4 +23,3 @@ EOF
 systemctl enable docker
 
 systemctl daemon-reload && sudo systemctl restart docker
-
